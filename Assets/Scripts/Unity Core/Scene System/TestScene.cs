@@ -25,7 +25,7 @@ namespace UnityCore
                 }
                 if (Input.GetKeyUp(KeyCode.G))
                 {
-                    sceneController.Load(SceneType.Game);
+                    sceneController.Load(SceneType.Level1);
                 }
             }
 #endif

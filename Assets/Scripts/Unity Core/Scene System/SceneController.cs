@@ -188,7 +188,22 @@ namespace UnityCore
             {
                 switch (_scene)
                 {
-                    case SceneType.Game: return "Game";
+                    case SceneType.Level1: return "Level1";
+                    case SceneType.Level2: return "Level2";
+                    case SceneType.Level3: return "Level3";
+                    case SceneType.Level4: return "Level4";
+                    case SceneType.Level5: return "Level5";
+                    case SceneType.Level6: return "Level6";
+                    case SceneType.Level7: return "Level7";
+                    case SceneType.Level8: return "Level8";
+                    case SceneType.Level9: return "Level9";
+                    case SceneType.Level10: return "Level10";
+                    case SceneType.Level11: return "Level11";
+                    case SceneType.Level12: return "Level12";
+                    case SceneType.Level13: return "Level13";
+                    case SceneType.Level14: return "Level14";
+                    case SceneType.Level15: return "Level15";
+                    case SceneType.Level16: return "Level16";
                     case SceneType.Menu: return "Menu";
                     default:
                         LogWarning("Scene [" + _scene + "] does not contain a string for a valid scene.");
