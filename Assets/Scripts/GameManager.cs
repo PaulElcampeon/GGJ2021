@@ -24,9 +24,16 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void SetIsGameover(bool isGameOver)
+    public bool IsGameOver()
     {
-        this._isGameOver = isGameOver;
+        return this._isGameOver;
+    }
+
+    public void EndGame()
+    {
+        this._isGameOver = true;
+
+        DisableControls();
     }
 
     public void DisableControls()

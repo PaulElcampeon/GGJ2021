@@ -48,6 +48,8 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.INSTANCE.IsGameOver()) return;
+
         if (_shouldStop) return;
 
         if (_isPlayerDetected)
