@@ -10,10 +10,13 @@
         <e p="Scripts" t="Include">
           <e p="Enemy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="InteractableUI.cs" t="Include" />
+          <e p="Menus.cs" t="Include" />
           <e p="MovementTracker.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="SettingsMenu.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="MovementTrackerUI.cs" t="Include" />
           </e>
