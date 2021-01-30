@@ -196,6 +196,8 @@ public class Player : MonoBehaviour
 
         if (hit.collider != null)
         {
+            hit.collider.gameObject.GetComponentInParent<Interactable>().Interact();
+
             _isInteracting = true;
         }
         else
