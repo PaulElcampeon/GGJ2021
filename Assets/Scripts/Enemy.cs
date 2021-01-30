@@ -30,7 +30,10 @@ public class Enemy : MonoBehaviour
     private bool _isMovingForward;
 
     private bool _shouldStop;
+
     private bool _shouldFinishOffPath;
+
+    private Animator _anim;
 
     private Dictionary<Vector3, bool> exhasutedNodes = new Dictionary<Vector3, bool>();
 
@@ -43,6 +46,8 @@ public class Enemy : MonoBehaviour
         _targetPosition = _path[0];
 
         _isMovingForward = true;
+
+        _anim = GetComponent<Animator>();
 
     }
 
@@ -62,7 +67,6 @@ public class Enemy : MonoBehaviour
             {
                 Move();
             }
-
         }
         else
         {
@@ -142,6 +146,42 @@ public class Enemy : MonoBehaviour
         }
 
         _targetPosition = _path[_currentPathNodeIndex];
+
+        if (_targetPosition.x > transform.position.x)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            _anim.SetFloat("Horizontal Input", 1);
+            _anim.SetFloat("Vertical Input", 0);
+
+            return;
+        }
+        else if (_targetPosition.x < transform.position.x)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            _anim.SetFloat("Horizontal Input", -1);
+            _anim.SetFloat("Vertical Input", 0);
+
+            return;
+        }
+
+
+        if (_targetPosition.y > transform.position.y)
+        {
+            _anim.SetFloat("Vertical Input", 1);
+            _anim.SetFloat("Horizontal Input", 0);
+
+            return;
+        }
+        else if (_targetPosition.y < transform.position.y)
+        {
+            _anim.SetFloat("Vertical Input", -1);
+            _anim.SetFloat("Horizontal Input", 0);
+
+            return;
+        }
+
+        //_anim.SetFloat("Horizontal Input", 1);
+        //_anim.SetFloat("Vertical Input", 0);
     }
 
     private bool IsPlayerInRange()
@@ -207,6 +247,10 @@ public class Enemy : MonoBehaviour
 
                     exhasutedNodes.Add(targetPositon, true);
 
+                    _anim.SetFloat("Horizontal Input", 1);
+                    _anim.SetFloat("Vertical Input", 0);
+
+
                     return;
                 }
                 else
@@ -220,6 +264,9 @@ public class Enemy : MonoBehaviour
                             _targetPosition = targetPositon;
 
                             exhasutedNodes.Add(targetPositon, true);
+
+                            _anim.SetFloat("Horizontal Input", 0);
+                            _anim.SetFloat("Vertical Input", 1);
 
                             return;
                         }
@@ -235,6 +282,9 @@ public class Enemy : MonoBehaviour
                                 _targetPosition = targetPositon;
 
                                 exhasutedNodes.Add(targetPositon, true);
+
+                                _anim.SetFloat("Horizontal Input", 0);
+                                _anim.SetFloat("Vertical Input", -1);
 
                                 return;
                             }
@@ -255,6 +305,9 @@ public class Enemy : MonoBehaviour
 
                     exhasutedNodes.Add(targetPositon, true);
 
+                    _anim.SetFloat("Horizontal Input", -1);
+                    _anim.SetFloat("Vertical Input", 0);
+
                     return;
                 }
                 else
@@ -268,6 +321,9 @@ public class Enemy : MonoBehaviour
                             _targetPosition = targetPositon;
 
                             exhasutedNodes.Add(targetPositon, true);
+
+                            _anim.SetFloat("Horizontal Input", 0);
+                            _anim.SetFloat("Vertical Input", 1);
 
                             return;
                         }
@@ -283,6 +339,9 @@ public class Enemy : MonoBehaviour
                                 _targetPosition = targetPositon;
 
                                 exhasutedNodes.Add(targetPositon, true);
+
+                                _anim.SetFloat("Horizontal Input", 0);
+                                _anim.SetFloat("Vertical Input", -1);
 
                                 return;
                             }
@@ -305,6 +364,9 @@ public class Enemy : MonoBehaviour
 
                     exhasutedNodes.Add(targetPositon, true);
 
+                    _anim.SetFloat("Horizontal Input", 0);
+                    _anim.SetFloat("Vertical Input", 1);
+
                     return;
                 }
                 else
@@ -318,6 +380,9 @@ public class Enemy : MonoBehaviour
                             _targetPosition = targetPositon;
 
                             exhasutedNodes.Add(targetPositon, true);
+
+                            _anim.SetFloat("Horizontal Input", 1);
+                            _anim.SetFloat("Vertical Input", 0);
 
                             return;
                         }
@@ -333,6 +398,9 @@ public class Enemy : MonoBehaviour
                                 _targetPosition = targetPositon;
 
                                 exhasutedNodes.Add(targetPositon, true);
+
+                                _anim.SetFloat("Horizontal Input", -1);
+                                _anim.SetFloat("Vertical Input", 0);
 
                                 return;
                             }
@@ -353,6 +421,9 @@ public class Enemy : MonoBehaviour
 
                     exhasutedNodes.Add(targetPositon, true);
 
+                    _anim.SetFloat("Horizontal Input", 0);
+                    _anim.SetFloat("Vertical Input", -1);
+
                     return;
                 }
                 else
@@ -366,6 +437,9 @@ public class Enemy : MonoBehaviour
                             _targetPosition = targetPositon;
 
                             exhasutedNodes.Add(targetPositon, true);
+
+                            _anim.SetFloat("Horizontal Input", 1);
+                            _anim.SetFloat("Vertical Input", 0);
 
                             return;
                         }
@@ -381,6 +455,9 @@ public class Enemy : MonoBehaviour
                                 _targetPosition = targetPositon;
 
                                 exhasutedNodes.Add(targetPositon, true);
+
+                                _anim.SetFloat("Horizontal Input", -1);
+                                _anim.SetFloat("Vertical Input", 0);
 
                                 return;
                             }
