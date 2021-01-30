@@ -215,7 +215,7 @@ namespace UnityCore
             {
                 switch (_scene)
                 {
-                    case "Game": return SceneType.Game;
+                    case "Level1": return SceneType.Level1;
                     case "Menu": return SceneType.Menu;
                     default:
                         LogWarning("Scene [" + _scene + "] does not contain a type for a valid scene.");
