@@ -15,31 +15,31 @@ namespace UnityCore
 #if UNITY_EDITOR
             private void Update()
             {
-                if (Input.GetKeyUp(KeyCode.V))
+                if (Input.GetKeyUp(KeyCode.R))
                 {
                     audioController.PlayAudio(AudioType.ST_01, true, 1.0f);
                 }
-                if (Input.GetKeyUp(KeyCode.B))
+                if (Input.GetKeyUp(KeyCode.T))
                 {
                     audioController.StopAudio(AudioType.ST_01, true);
                 }
-                if (Input.GetKeyUp(KeyCode.N))
+                if (Input.GetKeyUp(KeyCode.Y))
                 {
                     audioController.RestartAudio(AudioType.ST_01, true, 1.0f);
                 }               
-                if (Input.GetKeyUp(KeyCode.M))
+                if (Input.GetKeyUp(KeyCode.U))
                 {
                     audioController.PlayAudio(AudioType.SFX_01);
                 }
-                if (Input.GetKeyUp(KeyCode.F))
+                if (Input.GetKeyUp(KeyCode.I))
                 {
                     audioController.StopAudio(AudioType.SFX_01);
                 }
-                if (Input.GetKeyUp(KeyCode.G))
+                if (Input.GetKeyUp(KeyCode.O))
                 {
                     audioController.RestartAudio(AudioType.SFX_01);
                 }
-                if (Input.GetKeyUp(KeyCode.H))
+                if (Input.GetKeyUp(KeyCode.P))
                 {
 
                 }

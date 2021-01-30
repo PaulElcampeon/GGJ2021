@@ -17,13 +17,13 @@ namespace UnityCore
 #if UNITY_EDITOR
             private void Update()
             {
-                if (Input.GetKeyUp(KeyCode.M))
+                if (Input.GetKeyUp(KeyCode.Z))
                 {
                     sceneController.Load(SceneType.Menu, (_scene) => {
                         Debug.Log("Scene [" + _scene + "] loaded from test script!");
                     }, false, PageType.Loading);
                 }
-                if (Input.GetKeyUp(KeyCode.G))
+                if (Input.GetKeyUp(KeyCode.X))
                 {
                     sceneController.Load(SceneType.Level1);
                 }

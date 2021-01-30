@@ -59,6 +59,7 @@ namespace UnityCore
             //singleton
             private void Awake()
             {
+                DontDestroyOnLoad(gameObject);
                 //instance
                 if (!instance)
                 {
