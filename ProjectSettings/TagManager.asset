@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Ice
   - Death
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Hazard
   - Ice
   - Death
-  - 
+  - Interactable
   - 
   - 
   - 
