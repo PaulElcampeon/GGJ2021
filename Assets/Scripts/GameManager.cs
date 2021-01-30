@@ -8,20 +8,39 @@ public class GameManager : MonoBehaviour
 
     private bool _isControlsDisabled = false;
 
+    private WinTile[] winTiles;
+
     public static GameManager INSTANCE;
 
     void Start()
     {
-        INSTANCE = this;    
+        INSTANCE = this;
+
+        winTiles = GameObject.FindObjectsOfType<WinTile>();
     }
 
     void Update()
     {
         if (_isGameOver)
         {
-            Debug.Log("Game over");
+            Debug.Log("Game Over");
+        }
+
+        if (CheckIfPlayersAreInWinningTile())
+        {
+            Debug.Log("Game Won");
         }
         
+    }
+
+    private bool CheckIfPlayersAreInWinningTile()
+    {
+        foreach(WinTile winTile in winTiles)
+        {
+            if (!winTile.IsPlayerPresent()) return false;
+        }
+
+        return true;
     }
 
     public bool IsGameOver()
