@@ -179,9 +179,6 @@ public class Enemy : MonoBehaviour
 
             return;
         }
-
-        //_anim.SetFloat("Horizontal Input", 1);
-        //_anim.SetFloat("Vertical Input", 0);
     }
 
     private bool IsPlayerInRange()
