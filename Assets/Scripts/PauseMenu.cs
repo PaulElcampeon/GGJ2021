@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject settings;
 
     void Update()
     {
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenuUI.SetActive(false);
+        settings.SetActive(false); // this may be temporary
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
@@ -45,11 +47,17 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void LoadMenu()
+    public void LoadMainMenu()
     {
-        Debug.Log("Loading menu...");
+        Debug.Log("Loading main menu...");
         SceneManager.LoadScene(0);// Menu is scene 0 in build settings
         Time.timeScale = 1f;
+    }
+
+    public void LoadSettings(){
+        Debug.Log("Opened settings...");
+        pauseMenuUI.SetActive(false);
+        settings.SetActive(true);
     }
 
     public void QuitGame()
