@@ -96,6 +96,12 @@ namespace UnityCore
 
             }
 
+            public void LoadSimplified(string _scene)
+            {
+                
+                Load(StringToSceneType(_scene));
+            }
+
             #endregion
 
             #region Private Functions

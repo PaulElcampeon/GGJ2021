@@ -14,22 +14,22 @@ namespace UnityCore
 #if UNITY_EDITOR
             private void Update()
             {
-                if (Input.GetKeyUp(KeyCode.U))
+                if (Input.GetKeyUp(KeyCode.C))
                 {
                     pageController.TurnPageOn(PageType.Loading);
                 }
 
-                if (Input.GetKeyUp(KeyCode.I))
+                if (Input.GetKeyUp(KeyCode.V))
                 {
                     pageController.TurnPageOff(PageType.Loading);
                 }
 
-                if (Input.GetKeyUp(KeyCode.O))
+                if (Input.GetKeyUp(KeyCode.B))
                 {
                     pageController.TurnPageOff(PageType.Loading, PageType.Menu);
                 }
 
-                if (Input.GetKeyUp(KeyCode.P))
+                if (Input.GetKeyUp(KeyCode.N))
                 {
                     pageController.TurnPageOff(PageType.Loading, PageType.Menu, true);
                 }
