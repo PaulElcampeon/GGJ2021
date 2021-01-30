@@ -22,4 +22,8 @@ public class SettingsMenu : MonoBehaviour
         Debug.Log("Toggled fullscreen");
         Screen.fullScreen = isFullscreen;
     }
+
+    public void BackButton(){
+        Debug.Log("Back to previous UI element");
+    }
 }
