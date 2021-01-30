@@ -5132,6 +5132,9 @@ MonoBehaviour:
   _deathLayer:
     serializedVersion: 2
     m_Bits: 2048
+  _interactableLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!212 &1055789986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6167,6 +6170,9 @@ MonoBehaviour:
   _deathLayer:
     serializedVersion: 2
     m_Bits: 2048
+  _interactableLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!212 &1557119598
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6360,6 +6366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SettingsMenuUI: {fileID: 776976081}
+  previousMenuUI: {fileID: 1753076830}
 --- !u!1 &1715821542
 GameObject:
   m_ObjectHideFlags: 0
