@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private LayerMask _deathLayer;
 
+    [SerializeField]
+    private LayerMask _interactableLayer;
+
     private float _horizontalInput; // movement in x axis
 
     private float _verticalInput; // movement in y axis
@@ -38,6 +41,8 @@ public class Player : MonoBehaviour
     private Vector3 _targetPosition;
 
     private Animator _anim;
+
+    private bool _isInteracting;
 
     public void Start()
     {
@@ -53,6 +58,8 @@ public class Player : MonoBehaviour
     public void Update()
     {
         if (GameManager.INSTANCE.IsGameOver()) return;
+
+        CheckForInteractable();
 
         if (IsAtTargetPosition())
         {
@@ -122,7 +129,7 @@ public class Player : MonoBehaviour
 
     private bool IsTargetPositionFree(Vector2 targetPosition)
     {
-        if (!Physics2D.OverlapCircle(targetPosition, _checkCircleSize, _obstacle))
+        if (!Physics2D.OverlapCircle(targetPosition, _checkCircleSize, _obstacle) && !Physics2D.OverlapCircle(targetPosition, _checkCircleSize, _interactableLayer))
         {
             return true;
         }
@@ -181,6 +188,22 @@ public class Player : MonoBehaviour
         return false;
     }
 
+    private void CheckForInteractable()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(_horizontalInput, _verticalInput), 1f, _interactableLayer);
+
+        Debug.DrawRay(transform.position, new Vector2(_horizontalInput, _verticalInput) * 1f, Color.green);
+
+        if (hit.collider != null)
+        {
+            _isInteracting = true;
+        }
+        else
+        {
+            _isInteracting = false;
+        }
+    }
+
     private void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _speed * Time.deltaTime);
@@ -199,5 +222,10 @@ public class Player : MonoBehaviour
     public void ResetSpeed()
     {
         this._speed = _originalSpeed;
+    }
+
+    public bool IsInteracting()
+    {
+        return this._isInteracting;
     }
 }
