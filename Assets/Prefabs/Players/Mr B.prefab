@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853463668339256940}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _step: 1
   _speed: 2
-  _startingPoint: {x: -3.5, y: -0.5}
+  _startingPoint: {x: -5.5, y: -3.5}
   _isInverse: 0
   _obstacle:
     serializedVersion: 2
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 7128504483966800548}
   - component: {fileID: 7128504483966800549}
   - component: {fileID: 7128504483966800550}
+  - component: {fileID: 3508909061197355263}
   m_Layer: 14
   m_Name: Mr Blue
   m_TagString: Player
@@ -188,3 +189,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3508909061197355263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7128504483966800551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c040c3ed26d5ff4598a89eed3128aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
