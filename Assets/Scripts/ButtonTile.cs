@@ -8,7 +8,7 @@ public class ButtonTile : MonoBehaviour
     private GameObject _playerToDetect;
 
     [SerializeField]
-    private GameObject _objectToModify;
+    private GameObject[] _objectsToModify;
 
     void Start()
     {
@@ -26,7 +26,10 @@ public class ButtonTile : MonoBehaviour
         {
             Debug.Log("Player Detected on Button Tile");
 
-            Destroy(_objectToModify);
+            foreach (GameObject gameObject in _objectsToModify)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
