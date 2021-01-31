@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
-        _anim = GetComponent<Animator>();
+        _anim = GetComponentInChildren<Animator>();
 
         transform.position = _startingPoint;
 
