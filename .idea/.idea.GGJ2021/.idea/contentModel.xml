@@ -47,6 +47,7 @@
           <e p="Menus.cs" t="Include" />
           <e p="MovementTracker.cs" t="Include" />
           <e p="OnPlayerDeath.cs" t="Include" />
+          <e p="PaperNote.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
