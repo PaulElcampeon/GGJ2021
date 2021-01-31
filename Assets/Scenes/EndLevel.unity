@@ -1402,13 +1402,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 60
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Found Him!
+  m_Text: There you are!
 --- !u!222 &1055073948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1627,7 +1627,7 @@ MonoBehaviour:
     - "Grandpa:  But I have so much left to explore\u2026"
     - "You: There\u2019s no time! If we stay too long our realities will collapse.
       You\u2019ll doom our reality!"
-    - "Grandpa: Oh, okay... Let\u2019s go then.... I'll be back! "
+    - "Grandpa: Oh, okay... Let\u2019s go then...."
 --- !u!114 &1376339097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1674,6 +1674,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1376339096}
         m_MethodName: TriggerDialogue
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1376339094}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
