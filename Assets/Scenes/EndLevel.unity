@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -585,8 +585,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.799988, y: -434.8}
-  m_SizeDelta: {x: -19.667236, y: -869.50525}
+  m_AnchoredPosition: {x: 13.400024, y: -435.90002}
+  m_SizeDelta: {x: -66.042725, y: -871.7141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384792666
 MonoBehaviour:
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: bcda4021dfa724e4a906dc1f4a871343, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1547,18 +1547,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 60069b9894c42214ba9c575570308bff, type: 3}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 60
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dialogue Box
+  m_Text: 
 --- !u!222 &1262108616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1622,13 +1622,12 @@ MonoBehaviour:
   dialogue:
     name: Grandpa
     sentences:
-    - "Grandpa: Ah! You found me/You\u2019re early!"
+    - 'Grandpa: Ah! You found me!'
     - 'You: You need to come back!'
     - "Grandpa:  But I have so much left to explore\u2026"
-    - "You: There\u2019s no time! If we stay too long our realities/universes/worlds
-      (or whatever) will collapse. We\u2019ll all die/everyone will die/you\u2019ll
-      doom our reality!"
-    - "Grandpa: Oh, okay. Let\u2019s go then :c"
+    - "You: There\u2019s no time! If we stay too long our realities will collapse.
+      You\u2019ll doom our reality!"
+    - "Grandpa: Oh, okay... Let\u2019s go then.... I'll be back! "
 --- !u!114 &1376339097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,8 +1701,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -5298207885653783458, guid: e9cc085c300545f4aaba3b4f46757f72,
+    type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1981,8 +1981,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 740, y: -480.5}
-  m_SizeDelta: {x: 298.13055, y: 71.50644}
+  m_AnchoredPosition: {x: 733.3, y: -475}
+  m_SizeDelta: {x: 311.38055, y: 82.55087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1937816209
 MonoBehaviour:
@@ -2057,8 +2057,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -888181088799368335, guid: a62261f6483154c449d71335703d379a,
+    type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

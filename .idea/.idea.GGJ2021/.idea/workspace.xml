@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fe88daf2-5a25-491a-9cf1-54c3023850c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/EndLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EndLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +64,7 @@
       <updated>1612005919416</updated>
       <workItem from="1612005947544" duration="2780000" />
       <workItem from="1612097661748" duration="4934000" />
+      <workItem from="1612110608932" duration="387000" />
     </task>
     <servers />
   </component>
