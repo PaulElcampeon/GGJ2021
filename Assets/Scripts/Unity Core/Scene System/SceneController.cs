@@ -222,6 +222,10 @@ namespace UnityCore
                 switch (_scene)
                 {
                     case "Level1": return SceneType.Level1;
+                    case "Level2": return SceneType.Level2;
+                    case "Level3": return SceneType.Level3;
+                    case "Level4": return SceneType.Level4;
+                    case "Level5": return SceneType.Level5;
                     case "Menu": return SceneType.Menu;
                     default:
                         LogWarning("Scene [" + _scene + "] does not contain a type for a valid scene.");

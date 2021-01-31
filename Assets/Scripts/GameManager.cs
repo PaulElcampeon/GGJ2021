@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityCore.Scene;
+using UnityEngine.SceneManagement;
+using UnityCore.Scene;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private string _nextLevel;
+
     private bool _isGameOver = false;
 
     private bool _isControlsDisabled = false;
@@ -12,11 +18,17 @@ public class GameManager : MonoBehaviour
 
     public static GameManager INSTANCE;
 
+    private bool _isSceneLoading;
+
+    private SceneController sceneController;
+
     void Start()
     {
         INSTANCE = this;
 
         winTiles = GameObject.FindObjectsOfType<WinTile>();
+
+        sceneController = GameObject.FindObjectOfType<SceneController>();
     }
 
     void Update()
@@ -28,7 +40,14 @@ public class GameManager : MonoBehaviour
 
         if (CheckIfPlayersAreInWinningTile())
         {
+            if (_isSceneLoading) return;
+
             Debug.Log("Game Won");
+
+            sceneController.LoadSimplified(_nextLevel);
+
+            _isSceneLoading = true;
+
         }
         
     }
