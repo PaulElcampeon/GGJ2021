@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5310362750043857877
 Transform:
   m_ObjectHideFlags: 0
@@ -306,7 +306,21 @@ MonoBehaviour:
   - source: {fileID: 5310362749800235844}
     audio:
     - type: 0
-      clip: {fileID: 8300000, guid: 6cb71de924ceb9a46bc0c1e68026232a, type: 3}
+      clip: {fileID: 8300000, guid: a4670477ddcbaf44299a9fc05b6039df, type: 3}
+    - type: 1
+      clip: {fileID: 8300000, guid: 2884702393159994997d77452d7749e6, type: 3}
+  - source: {fileID: 5310362750043857874}
+    audio:
+    - type: 4
+      clip: {fileID: 8300000, guid: 2c99f22a9644dfb4bb349b8360e8f09b, type: 3}
+    - type: 5
+      clip: {fileID: 8300000, guid: eb849539bbda1984589822c102c27442, type: 3}
+    - type: 6
+      clip: {fileID: 8300000, guid: d147891645b1ab043935c8802a625cee, type: 3}
+    - type: 7
+      clip: {fileID: 8300000, guid: f1989f868a9bc1e428e9752313a58101, type: 3}
+    - type: 8
+      clip: {fileID: 8300000, guid: e352e8a1b65e7d04fa246d8808ebcebd, type: 3}
 --- !u!1 &5310362750547682965
 GameObject:
   m_ObjectHideFlags: 0
