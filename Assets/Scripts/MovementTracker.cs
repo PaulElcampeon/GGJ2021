@@ -20,6 +20,8 @@ public class MovementTracker : MonoBehaviour
 
     void LateUpdate()
     {
+        if (_numberMovesAllowed == 0) return;
+
         if (_hasMovementOccured)
         {
             _numberMovesAllowed--;
@@ -29,7 +31,18 @@ public class MovementTracker : MonoBehaviour
             MovementTrackerUI.INSTANCE.SetNoOfMoves(_numberMovesAllowed);
 
             _hasMovementOccured = false;
-        }    
+
+            if (_numberMovesAllowed == 0)
+            {
+                GameManager.INSTANCE.DisableControls();
+
+                foreach (Player player in GameObject.FindObjectsOfType<Player>())
+                {
+
+                    player.Die();
+                }
+            }
+        }
     }
 
     public void EnableMovementHasOccured()
