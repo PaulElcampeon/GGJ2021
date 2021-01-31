@@ -36,6 +36,7 @@
         <e p="Scripts" t="Include">
           <e p="Button.cs" t="Include" />
           <e p="ButtonTile.cs" t="Include" />
+          <e p="Dialogue.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
