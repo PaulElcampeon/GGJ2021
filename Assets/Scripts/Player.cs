@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
 
         if (IsAtTargetPosition())
         {
-            if (_isOnDeathFloor)
+            if (_isOnDeathFloor && !_isDead)
             {
                 transform.position = _targetPosition;
 
@@ -74,7 +74,10 @@ public class Player : MonoBehaviour
 
                 AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
 
+               
                 GameManager.INSTANCE.EndGame();
+
+                _isDead = true;
             }
 
             if (GameManager.INSTANCE.IsControlsDisabled()) return;

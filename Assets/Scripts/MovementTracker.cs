@@ -20,7 +20,7 @@ public class MovementTracker : MonoBehaviour
 
     void LateUpdate()
     {
-        if (_numberMovesAllowed == 0) return;
+        if (_numberMovesAllowed == -1) return;
 
         if (_hasMovementOccured)
         {
@@ -32,7 +32,7 @@ public class MovementTracker : MonoBehaviour
 
             _hasMovementOccured = false;
 
-            if (_numberMovesAllowed == 0)
+            if (_numberMovesAllowed == -1)
             {
                 GameManager.INSTANCE.DisableControls();
 

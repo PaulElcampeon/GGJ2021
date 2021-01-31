@@ -18,6 +18,7 @@ public class PaperNote : MonoBehaviour
 
     private bool _canClick = false;
 
+    private bool _isSoundPlaying;
 
     private bool _flag = false;
 
@@ -35,8 +36,9 @@ public class PaperNote : MonoBehaviour
 
             _canvas.SetActive(true);
 
-            AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Jump, false, 0f);
+            if (!_isSoundPlaying) AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Jump, false, 0f);
 
+            _isSoundPlaying = true;
 
             if (!_flag)
             {
