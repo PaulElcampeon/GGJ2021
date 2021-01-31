@@ -14,11 +14,16 @@ public class Menus : MonoBehaviour
 
     public GameObject settings;
 
+    public GameObject credits;
+
     public void LoadCredits(){
         Debug.Log("Roll credits");
+        mainMenuUI.SetActive(false);
+        credits.SetActive(true);
     }
 
     public void LoadSettings(){
+        // would have been better to name it 'DisplaySettings'
         Debug.Log("Opened settings...");
         mainMenuUI.SetActive(false);
         settings.SetActive(true);

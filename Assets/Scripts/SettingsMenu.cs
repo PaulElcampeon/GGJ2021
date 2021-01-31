@@ -5,7 +5,7 @@ using UnityEngine;
 public class SettingsMenu : MonoBehaviour
 {
 
-    public GameObject SettingsMenuUI; // not yet in use
+    public GameObject SettingsMenuUI; 
     public GameObject previousMenuUI; // could be main or pause menu
 
     public void SetMusicVolume(float volume)
@@ -24,7 +24,8 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 
-    public void BackButton(){
+    public void BackButton()
+    {
         Debug.Log("Back to previous UI element");
         SettingsMenuUI.SetActive(false);
         previousMenuUI.SetActive(true);
