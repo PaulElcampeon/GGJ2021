@@ -12,6 +12,7 @@ namespace UnityCore
         {
             None,
             Menu,
+            TemplateLevel,
             Level1,
             Level2,
             Level3,

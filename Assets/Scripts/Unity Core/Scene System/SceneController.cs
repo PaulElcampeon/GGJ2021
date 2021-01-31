@@ -194,6 +194,7 @@ namespace UnityCore
             {
                 switch (_scene)
                 {
+                    case SceneType.TemplateLevel: return "TemplateLevel";
                     case SceneType.Level1: return "Level1";
                     case SceneType.Level2: return "Level2";
                     case SceneType.Level3: return "Level3";
@@ -221,6 +222,7 @@ namespace UnityCore
             {
                 switch (_scene)
                 {
+                    case "TemplateLevel": return SceneType.TemplateLevel;
                     case "Level1": return SceneType.Level1;
                     case "Level2": return SceneType.Level2;
                     case "Level3": return SceneType.Level3;

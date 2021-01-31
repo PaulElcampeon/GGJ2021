@@ -158,7 +158,7 @@ public class Player : MonoBehaviour
 
     private void CheckIfTargetPositionIsDeath(Vector2 targetPosition)
     {
-        if (Physics2D.OverlapCircle(targetPosition, _checkCircleSize, _deathLayer))
+        if (Physics2D.OverlapCircle(targetPosition, 0.3f, _deathLayer))
         {
             _isOnDeathFloor = true;
         }
@@ -229,5 +229,10 @@ public class Player : MonoBehaviour
     public bool IsInteracting()
     {
         return this._isInteracting;
+    }
+
+    public void Dead()
+    {
+        GameManager.INSTANCE.ReloadScene();
     }
 }

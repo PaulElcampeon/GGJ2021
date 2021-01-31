@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityCore.Scene;
 using UnityEngine.SceneManagement;
-using UnityCore.Scene;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,7 +34,12 @@ public class GameManager : MonoBehaviour
     {
         if (_isGameOver)
         {
+            if (_isSceneLoading) return;
+
             Debug.Log("Game Over");
+
+            _isSceneLoading = true;
+
         }
 
         if (CheckIfPlayersAreInWinningTile())
@@ -84,5 +88,10 @@ public class GameManager : MonoBehaviour
     public bool IsControlsDisabled()
     {
         return this._isControlsDisabled;
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

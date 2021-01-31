@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Dunni.unity
     guid: c7266d586baa6c746a0f41712f3888cf
+  - enabled: 1
+    path: Assets/Scenes/TemplateLevel.unity
+    guid: 3785a2bbc03ca1a4fbc2058151f82761
   m_configObjects: {}
