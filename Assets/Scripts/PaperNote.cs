@@ -15,15 +15,17 @@ public class PaperNote : MonoBehaviour
     [SerializeField]
     private float _distanceToDetect = 2f;
 
-    private bool _playerDetected = false;
+    private bool _canClick = false;
+
 
     private bool _flag = false;
 
     void Update()
     {
-        if (Input.anyKey && _playerDetected)
+        if (Input.anyKey && _canClick)
         {
             SceneManager.LoadScene("Level1");
+            Debug.Log("Loading scene 1");
         }
 
         if (Vector3.Distance(transform.position, _player.transform.position) <= _distanceToDetect)
@@ -40,8 +42,10 @@ public class PaperNote : MonoBehaviour
 
     private IEnumerator NoName()
     {
+        _flag = true;
+
         yield return new WaitForSeconds(2f);
 
-        _playerDetected = true;
+        _canClick = true;
     }
 }
