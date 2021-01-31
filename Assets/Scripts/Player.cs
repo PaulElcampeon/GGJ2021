@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
 
     private bool _isOnDeathFloor;
 
+    private bool _isDead;
+
     private Vector3 _targetPosition;
 
     private Animator _anim;
@@ -46,7 +48,7 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
-        _anim = GetComponent<Animator>();
+        _anim = GetComponentInChildren<Animator>();
 
         transform.position = _startingPoint;
 
@@ -158,7 +160,7 @@ public class Player : MonoBehaviour
 
     private void CheckIfTargetPositionIsDeath(Vector2 targetPosition)
     {
-        if (Physics2D.OverlapCircle(targetPosition, _checkCircleSize, _deathLayer))
+        if (Physics2D.OverlapCircle(targetPosition, 0.3f, _deathLayer))
         {
             _isOnDeathFloor = true;
         }
@@ -229,5 +231,22 @@ public class Player : MonoBehaviour
     public bool IsInteracting()
     {
         return this._isInteracting;
+    }
+
+    public void Dead()
+    {
+        GameManager.INSTANCE.ReloadScene();
+    }
+
+    public void Die()
+    {
+        _isDead = true;
+
+        _anim.SetTrigger("Death");
+    }
+
+    public bool IsDead()
+    {
+        return _isDead;
     }
 }

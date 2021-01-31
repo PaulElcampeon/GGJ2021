@@ -14,6 +14,9 @@ public class Enemy : MonoBehaviour
     private float _speed = 2f;
 
     [SerializeField]
+    private float _runSpeed = 5f;
+
+    [SerializeField]
     private LayerMask _obstacle;
 
     [SerializeField]
@@ -47,13 +50,14 @@ public class Enemy : MonoBehaviour
 
         _isMovingForward = true;
 
-        _anim = GetComponent<Animator>();
-
+        _anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
         if (GameManager.INSTANCE.IsGameOver()) return;
+
+        if (IsOnTopOfPlayer()) KillPlayer();
 
         if (_shouldStop) return;
 
@@ -149,7 +153,7 @@ public class Enemy : MonoBehaviour
 
         if (_targetPosition.x > transform.position.x)
         {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            FlipSprite(true);
             _anim.SetFloat("Horizontal Input", 1);
             _anim.SetFloat("Vertical Input", 0);
 
@@ -157,6 +161,7 @@ public class Enemy : MonoBehaviour
         }
         else if (_targetPosition.x < transform.position.x)
         {
+            FlipSprite(false);
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             _anim.SetFloat("Horizontal Input", -1);
             _anim.SetFloat("Vertical Input", 0);
@@ -196,15 +201,43 @@ public class Enemy : MonoBehaviour
                 Debug.Log("Player is in range");
 
                 GameManager.INSTANCE.DisableControls();
+
+                _speed = _runSpeed;
             }
         }
 
         return false;
     }
 
-    private void FlipSprite()
+    private bool IsOnTopOfPlayer()
     {
+        if (Vector3.Distance(transform.position, _playerToDetect.transform.position) < 0.1f)
+        {
+            return true;
+        }
 
+        return false;
+    }
+
+    private void KillPlayer()
+    {
+        if (!_playerToDetect.GetComponent<Player>().IsDead())
+        {
+            _playerToDetect.GetComponent<Player>().Die();
+
+        }
+    }
+
+    private void FlipSprite(bool shouldFlipRight = false)
+    {
+        if (shouldFlipRight)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     /*THIS METHOD HAS HAD LITTLE THINKING BEING PUT INTO IT*/

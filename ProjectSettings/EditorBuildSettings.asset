@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ecf87bc924de03a4280bd19cd30a99ce
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level2.unity
     guid: e0d1c7a9a0f8c7245a1f25647a2d5946
   - enabled: 0
     path: Assets/Scenes/Dunni.unity
     guid: c7266d586baa6c746a0f41712f3888cf
+  - enabled: 1
+    path: Assets/Scenes/Template Enemy.unity
+    guid: 3785a2bbc03ca1a4fbc2058151f82761
   m_configObjects: {}
