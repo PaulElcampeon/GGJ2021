@@ -7,12 +7,43 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Pathfinding" t="Include">
+          <e p="NavMeshPlus-master" t="Include">
+            <e p="NavMeshComponents" t="Include">
+              <e p="Editor" t="Include">
+                <e p="NavMeshAssetManager.cs" t="Include" />
+                <e p="NavMeshAssetManager2d.cs" t="Include" />
+                <e p="NavMeshComponentsEditor.asmdef" t="Include" />
+                <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+                <e p="NavMeshLinkEditor.cs" t="Include" />
+                <e p="NavMeshModifierEditor.cs" t="Include" />
+                <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+                <e p="NavMeshSurfaceEditor.cs" t="Include" />
+                <e p="NavMeshSurfaceEditor2d.cs" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="NavMeshBuilder2d.cs" t="Include" />
+                <e p="NavMeshComponents.asmdef" t="Include" />
+                <e p="NavMeshLink.cs" t="Include" />
+                <e p="NavMeshModifier.cs" t="Include" />
+                <e p="NavMeshModifierVolume.cs" t="Include" />
+                <e p="NavMeshSurface.cs" t="Include" />
+                <e p="NavMeshSurface2d.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Button.cs" t="Include" />
+          <e p="ButtonTile.cs" t="Include" />
+          <e p="DialogueManager.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="Interactable.cs" t="Include" />
           <e p="InteractableUI.cs" t="Include" />
           <e p="Menus.cs" t="Include" />
           <e p="MovementTracker.cs" t="Include" />
+          <e p="OnPlayerDeath.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
@@ -52,6 +83,7 @@
               <e p="TestScene.cs" t="Include" />
             </e>
           </e>
+          <e p="WinTile.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
@@ -86,6 +118,8 @@
         </e>
       </e>
       <e p="GGJ2021.sln" t="IncludeFlat" />
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
