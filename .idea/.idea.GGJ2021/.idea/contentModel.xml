@@ -38,6 +38,7 @@
           <e p="ButtonTile.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
+          <e p="DialogueTrigger.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Interactable.cs" t="Include" />
