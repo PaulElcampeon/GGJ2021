@@ -74,40 +74,41 @@ public class Enemy : MonoBehaviour
 
         if (_isAITakeOver)
         {
+            Debug.Log("adads");
             _agent.SetDestination(_playerToDetect.transform.position);
 
-            Vector3 direction = _agent.destination - _agent.transform.position;
+            //Vector3 direction = _agent.destination - _agent.transform.position;
 
-            float xDir = 0f;
-            float yDir = 0f;
+            //float xDir = 0f;
+            //float yDir = 0f;
 
-            if (Mathf.Abs(direction.x) > 0.05f)
-            {
-                xDir = direction.x;
-                if (xDir < 0)
-                {
-                    xDir = -1f;
-                }
-                else
-                {
-                    xDir = 1f;
-                }
-            }
-            else
-            {
+            //if (Mathf.Abs(direction.x) > 0.05f)
+            //{
+            //    xDir = direction.x;
+            //    if (xDir < 0)
+            //    {
+            //        xDir = -1f;
+            //    }
+            //    else
+            //    {
+            //        xDir = 1f;
+            //    }
+            //}
+            //else
+            //{
 
-                yDir = direction.y;
-                if (yDir < 0)
-                {
-                    yDir = -1f;
-                }
-                else
-                {
-                    yDir = 1f;
-                }
-            }
+            //    yDir = direction.y;
+            //    if (yDir < 0)
+            //    {
+            //        yDir = -1f;
+            //    }
+            //    else
+            //    {
+            //        yDir = 1f;
+            //    }
+            //}
 
-            _agent.transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(xDir, yDir, 0f), _speed * Time.deltaTime);
+            //_agent.transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(xDir, yDir, 0f), _speed * Time.deltaTime);
 
             //Animate(new Vector3(x, y));
 
