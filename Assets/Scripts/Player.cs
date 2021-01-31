@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
 
             _targetPosition = transform.position + new Vector3(_horizontalInput, _verticalInput) * _step;
 
-            if (IsTargetPositionFree(_targetPosition)) MovementTracker.INSTANCE.EnableMovementHasOccured();
+            if (IsTargetPositionFree(_targetPosition) && (_horizontalInput != 0 || _verticalInput != 0)) MovementTracker.INSTANCE.EnableMovementHasOccured();
 
         }
     }

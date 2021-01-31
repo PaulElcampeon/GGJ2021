@@ -36,6 +36,7 @@
         <e p="Scripts" t="Include">
           <e p="Button.cs" t="Include" />
           <e p="ButtonTile.cs" t="Include" />
+          <e p="creditsPage.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />
@@ -46,6 +47,7 @@
           <e p="Menus.cs" t="Include" />
           <e p="MovementTracker.cs" t="Include" />
           <e p="OnPlayerDeath.cs" t="Include" />
+          <e p="PaperNote.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
