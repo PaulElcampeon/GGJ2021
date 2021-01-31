@@ -5373,6 +5373,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Movement Tracker
       objectReference: {fileID: 0}
+    - target: {fileID: 8210316608560940987, guid: 8889911a8b5a6204e9ded2f0a85d8a09,
+        type: 3}
+      propertyPath: _numberMovesAllowed
+      value: 63
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8889911a8b5a6204e9ded2f0a85d8a09, type: 3}
 --- !u!1 &1356318456
