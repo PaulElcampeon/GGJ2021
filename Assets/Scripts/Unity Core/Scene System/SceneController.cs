@@ -228,6 +228,16 @@ namespace UnityCore
                     case "Level3": return SceneType.Level3;
                     case "Level4": return SceneType.Level4;
                     case "Level5": return SceneType.Level5;
+                    case "Level6": return SceneType.Level6;
+                    case "Level7": return SceneType.Level7;
+                    case "Level8": return SceneType.Level8;
+                    case "Level9": return SceneType.Level9;
+                    case "Level10": return SceneType.Level10;
+                    case "Level11": return SceneType.Level11;
+                    case "Level12": return SceneType.Level12;
+                    case "Level13": return SceneType.Level13;
+                    case "Level14": return SceneType.Level14;
+
                     case "Menu": return SceneType.Menu;
                     default:
                         LogWarning("Scene [" + _scene + "] does not contain a type for a valid scene.");
