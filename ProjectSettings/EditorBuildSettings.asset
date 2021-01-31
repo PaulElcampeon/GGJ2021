@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ecf87bc924de03a4280bd19cd30a99ce
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/Placeholder levels/Level2P.unity
     guid: e0d1c7a9a0f8c7245a1f25647a2d5946
   - enabled: 0
     path: Assets/Scenes/Dunni.unity
