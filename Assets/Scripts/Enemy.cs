@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -38,10 +40,21 @@ public class Enemy : MonoBehaviour
 
     private Animator _anim;
 
+    private NavMeshAgent _agent;
+
+    private bool _isAITakeOver;
+
     private Dictionary<Vector3, bool> exhasutedNodes = new Dictionary<Vector3, bool>();
 
     void Start()
     {
+
+        _agent = GetComponent<NavMeshAgent>();
+
+        _agent.updateRotation = false;
+
+        _agent.updateUpAxis = false;
+
         transform.position = _path[0];
 
         _currentPathNodeIndex = 0;
@@ -59,32 +72,74 @@ public class Enemy : MonoBehaviour
 
         if (IsOnTopOfPlayer()) KillPlayer();
 
-        if (_shouldStop) return;
-
-        if (_isPlayerDetected)
+        if (_isAITakeOver)
         {
-            if (IsAtTargetPosition())
+            _agent.SetDestination(_playerToDetect.transform.position);
+
+            Vector3 direction = _agent.destination - _agent.transform.position;
+
+            float xDir = 0f;
+            float yDir = 0f;
+
+            if (Mathf.Abs(direction.x) > 0.05f)
             {
-                AssignTargetPositionToGetToPlayer();
+                xDir = direction.x;
+                if (xDir < 0)
+                {
+                    xDir = -1f;
+                }
+                else
+                {
+                    xDir = 1f;
+                }
             }
             else
             {
-                Move();
+
+                yDir = direction.y;
+                if (yDir < 0)
+                {
+                    yDir = -1f;
+                }
+                else
+                {
+                    yDir = 1f;
+                }
             }
+
+            _agent.transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(xDir, yDir, 0f), _speed * Time.deltaTime);
+
+            //Animate(new Vector3(x, y));
+
+            return;
+        }
+
+        if (_shouldStop) return;
+
+        //if (_isPlayerDetected)
+        //{
+        //    if (IsAtTargetPosition())
+        //    {
+        //        AssignTargetPositionToGetToPlayer();
+        //    }
+        //    else
+        //    {
+        //        Move();
+        //    }
+        //}
+        //else
+        //{
+        if (IsAtTargetPosition())
+        {
+            AssignNewTargetNode();
         }
         else
         {
-            if (IsAtTargetPosition())
-            {
-                AssignNewTargetNode();
-            }
-            else
-            {
-                Move();
-            }
-
-            IsPlayerInRange();
+            Move();
         }
+
+        IsPlayerInRange();
+        //}
     }
 
     private void Move()
@@ -151,7 +206,12 @@ public class Enemy : MonoBehaviour
 
         _targetPosition = _path[_currentPathNodeIndex];
 
-        if (_targetPosition.x > transform.position.x)
+        Animate(_targetPosition);
+    }
+
+    private void Animate(Vector3 targetPosition)
+    {
+        if (targetPosition.x > transform.position.x)
         {
             FlipSprite(true);
             _anim.SetFloat("Horizontal Input", 1);
@@ -159,7 +219,7 @@ public class Enemy : MonoBehaviour
 
             return;
         }
-        else if (_targetPosition.x < transform.position.x)
+        else if (targetPosition.x < transform.position.x)
         {
             FlipSprite(false);
             transform.localRotation = Quaternion.Euler(0, 0, 0);
@@ -169,15 +229,14 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-
-        if (_targetPosition.y > transform.position.y)
+        if (targetPosition.y > transform.position.y)
         {
             _anim.SetFloat("Vertical Input", 1);
             _anim.SetFloat("Horizontal Input", 0);
 
             return;
         }
-        else if (_targetPosition.y < transform.position.y)
+        else if (targetPosition.y < transform.position.y)
         {
             _anim.SetFloat("Vertical Input", -1);
             _anim.SetFloat("Horizontal Input", 0);
@@ -203,6 +262,10 @@ public class Enemy : MonoBehaviour
                 GameManager.INSTANCE.DisableControls();
 
                 _speed = _runSpeed;
+
+                _agent.speed = _runSpeed;
+
+                _isAITakeOver = true;
             }
         }
 
@@ -241,6 +304,7 @@ public class Enemy : MonoBehaviour
     }
 
     /*THIS METHOD HAS HAD LITTLE THINKING BEING PUT INTO IT*/
+    /*
     private void AssignTargetPositionToGetToPlayer()
     {
         Vector3 ownPosition = transform.position;
@@ -497,4 +561,5 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+    */
 }
