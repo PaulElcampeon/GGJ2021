@@ -1612,10 +1612,13 @@ MonoBehaviour:
   dialogue:
     name: Grandpa
     sentences:
-    - 'Grandpa: Hello!!'
-    - 'Me: Hello Grandpa! How are you today!'
-    - non
-    - bob
+    - "Grandpa: Ah! You found me/You\u2019re early!"
+    - 'You: You need to come back!'
+    - "Grandpa:  But I have so much left to explore\u2026"
+    - "You: There\u2019s no time! If we stay too long our realities/universes/worlds
+      (or whatever) will collapse. We\u2019ll all die/everyone will die/you\u2019ll
+      doom our reality!"
+    - "Grandpa: Oh, okay. Let\u2019s go then :c"
 --- !u!114 &1376339097
 MonoBehaviour:
   m_ObjectHideFlags: 0
