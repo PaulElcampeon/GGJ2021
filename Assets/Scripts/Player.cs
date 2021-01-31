@@ -72,9 +72,8 @@ public class Player : MonoBehaviour
 
                 _anim.SetTrigger("Death");
 
-                AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
+                //AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
 
-               
                 GameManager.INSTANCE.EndGame();
 
                 _isDead = true;
@@ -250,7 +249,7 @@ public class Player : MonoBehaviour
 
         _anim.SetTrigger("Death");
 
-        AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
+        //AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
 
     }
 
