@@ -22,15 +22,11 @@ public class ButtonTile : MonoBehaviour
 
     private void CheckIfPlayerIsOnTile()
     {
-        if (Vector3.Distance(transform.position, _playerToDetect.transform.position) < .1f)
+        if (Vector3.Distance(transform.position, _playerToDetect.transform.position) < .2f)
         {
             Debug.Log("Player Detected on Button Tile");
 
-            if (_objectToModify.GetComponent<Collider2D>() != null)
-            {
-                _objectToModify.GetComponent<Collider2D>().enabled = false;
-            }
-
+            Destroy(_objectToModify);
         }
     }
 }
