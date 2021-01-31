@@ -314,47 +314,52 @@ PrefabInstance:
     - target: {fileID: 1308639470241645621, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1308639470241645621, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1308639470241645621, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 82.09558
       objectReference: {fileID: 0}
     - target: {fileID: 1308639470241645621, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -54.854706
       objectReference: {fileID: 0}
     - target: {fileID: 1308639470712862801, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1308639470712862801, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1308639470712862801, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 374.85022
       objectReference: {fileID: 0}
     - target: {fileID: 1308639470712862801, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -54.854706
       objectReference: {fileID: 0}
     - target: {fileID: 1308639471101522594, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
       propertyPath: m_Name
       value: Movement Tracker Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308639471101522594, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1308639471101522606, guid: 95ba62fb980949e4390e98c9d9ef6e6c,
         type: 3}
@@ -525,7 +530,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 60069b9894c42214ba9c575570308bff, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -713,7 +718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &519578263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -730,8 +735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: -7.3673}
-  m_SizeDelta: {x: 474.93774, y: 85.26547}
+  m_AnchoredPosition: {x: 22, y: 0.0000076293945}
+  m_SizeDelta: {x: 474.93774, y: 100.00003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519578264
 MonoBehaviour:
@@ -1118,7 +1123,7 @@ PrefabInstance:
     - target: {fileID: 374706907208207304, guid: e79b1974b64244e43b1659b65d5ddfb5,
         type: 3}
       propertyPath: _nextLevel
-      value: Level5
+      value: EndCredits
       objectReference: {fileID: 0}
     - target: {fileID: 374706907208207305, guid: e79b1974b64244e43b1659b65d5ddfb5,
         type: 3}
@@ -1327,6 +1332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Movement Tracker
       objectReference: {fileID: 0}
+    - target: {fileID: 8210316608560940985, guid: 8889911a8b5a6204e9ded2f0a85d8a09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8889911a8b5a6204e9ded2f0a85d8a09, type: 3}
 --- !u!1 &1055073945
@@ -1356,14 +1366,14 @@ RectTransform:
   m_GameObject: {fileID: 1055073945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1348, y: 1.1348, z: 1.1348}
   m_Children: []
   m_Father: {fileID: 1376339095}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.847, y: -0.0000038147}
+  m_AnchoredPosition: {x: 28.847, y: -13}
   m_SizeDelta: {x: 548.72986, y: 97.24814}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1055073947
@@ -1386,7 +1396,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 60069b9894c42214ba9c575570308bff, type: 3}
     m_FontSize: 60
     m_FontStyle: 1
     m_BestFit: 0
@@ -1398,7 +1408,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Conversation
+  m_Text: You Found Him!
 --- !u!222 &1055073948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1586,7 +1596,7 @@ RectTransform:
   m_GameObject: {fileID: 1376339094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.68253, y: 0.68253, z: 0.68253}
   m_Children:
   - {fileID: 1055073946}
   m_Father: {fileID: 308179754}
@@ -1594,7 +1604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 296}
+  m_AnchoredPosition: {x: -32, y: -266}
   m_SizeDelta: {x: 606.4243, y: 167.3945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376339096
@@ -1612,10 +1622,13 @@ MonoBehaviour:
   dialogue:
     name: Grandpa
     sentences:
-    - 'Grandpa: Hello!!'
-    - 'Me: Hello Grandpa! How are you today!'
-    - non
-    - bob
+    - "Grandpa: Ah! You found me/You\u2019re early!"
+    - 'You: You need to come back!'
+    - "Grandpa:  But I have so much left to explore\u2026"
+    - "You: There\u2019s no time! If we stay too long our realities/universes/worlds
+      (or whatever) will collapse. We\u2019ll all die/everyone will die/you\u2019ll
+      doom our reality!"
+    - "Grandpa: Oh, okay. Let\u2019s go then :c"
 --- !u!114 &1376339097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,6 +2354,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8525043727853913984, guid: 6b57758d322ce4a40960ceafcae94b54,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525043727853913984, guid: 6b57758d322ce4a40960ceafcae94b54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525043727853913984, guid: 6b57758d322ce4a40960ceafcae94b54,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.42314586
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525043727853913984, guid: 6b57758d322ce4a40960ceafcae94b54,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.42314586
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525043727853913984, guid: 6b57758d322ce4a40960ceafcae94b54,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.42314586
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525043727853913991, guid: 6b57758d322ce4a40960ceafcae94b54,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fbbc4eec2e1658249a7c9011fa265712,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b57758d322ce4a40960ceafcae94b54, type: 3}
 --- !u!483693784 &4994960678296828702
