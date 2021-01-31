@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
 
     private bool CheckIfPlayersAreInWinningTile()
     {
+        if (winTiles.Length == 0) return false;
+
         foreach(WinTile winTile in winTiles)
         {
             if (!winTile.IsPlayerPresent()) return false;
