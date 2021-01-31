@@ -10,50 +10,18 @@ public class Menus : MonoBehaviour
     I wanted to try and put all the menus in one place, thinking they'd
     have a lot of the same functionality...*/
     public static bool gameIsPaused = false;
-    public GameObject pauseMenuUI;
+    public GameObject mainMenuUI;
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
+    public GameObject settings;
 
-            if(!gameIsPaused)
-            {
-                PauseGame();
-            }
-            else
-            {
-                ResumeGame();
-            }
-        }
+    public void LoadCredits(){
+        Debug.Log("Roll credits");
     }
 
-    void PauseGame()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        gameIsPaused = true;
-    }
-
-    public void ResumeGame()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        gameIsPaused = false;
-    }
-
-    public void ResetLevel()
-    {
-        Debug.Log("Reloading level...");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1f;
-    }
-
-    public void LoadMenu()
-    {
-        Debug.Log("Loading menu...");
-        SceneManager.LoadScene(0);// Menu is scene 0 in build settings
-        Time.timeScale = 1f;
+    public void LoadSettings(){
+        Debug.Log("Opened settings...");
+        mainMenuUI.SetActive(false);
+        settings.SetActive(true);
     }
 
     public void QuitGame()
