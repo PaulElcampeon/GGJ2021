@@ -212,7 +212,7 @@ namespace UnityCore
             private void AddJob (AudioJob _job)
             {
                 //Remove conflicting jobs (lets say that one job on Soundtrack is running, and we need to play another, we need to turn the other off). Its an important edge case to take care of.
-                RemoveConflictingJobs(_job.type);
+                //RemoveConflictingJobs(_job.type);
 
                 //Start the job
                 IEnumerator _jobRunner = RunAudioJob(_job);
@@ -235,34 +235,34 @@ namespace UnityCore
                 m_JobTable.Remove(_type);
             }
 
-            private void RemoveConflictingJobs (AudioType _type)
-            {
-                //Checks if the jobtable for existing jobs and if there is a conflicting one it removes it.
-                if(m_JobTable.ContainsKey (_type))
-                {
-                    RemoveConflictingJobs(_type);
-                }
+            //private void RemoveConflictingJobs (AudioType _type)
+            //{
+            //    //Checks if the jobtable for existing jobs and if there is a conflicting one it removes it.
+            //    if(m_JobTable.ContainsKey (_type))
+            //    {
+            //        RemoveConflictingJobs(_type);
+            //    }
 
-                AudioType _conflictAudio = AudioType.None;
-                foreach(DictionaryEntry _entry in m_JobTable)
-                {
-                    AudioType _audioType = (AudioType)_entry.Key;
-                    AudioTrack _audioTrackInUse = (AudioTrack)m_AudioTable[_audioType];
-                    AudioTrack _audioTrackNeeded = (AudioTrack)m_AudioTable[_type];//this is our incoming job type
+            //    AudioType _conflictAudio = AudioType.None;
+            //    foreach(DictionaryEntry _entry in m_JobTable)
+            //    {
+            //        AudioType _audioType = (AudioType)_entry.Key;
+            //        AudioTrack _audioTrackInUse = (AudioTrack)m_AudioTable[_audioType];
+            //        AudioTrack _audioTrackNeeded = (AudioTrack)m_AudioTable[_type];//this is our incoming job type
 
-                    if (_audioTrackNeeded.source == _audioTrackInUse.source)
-                    {
-                        //There is a conflict
-                        _conflictAudio = _audioType;
-                        //We dont remove the job because we are iterating across the job table, and you should not remove entries as you are iterating through a table , you will get exceptions thrown.
-                    }
-                }
-                if (_conflictAudio != AudioType.None) //if the audiotype changes, that means there was a conflict
-                {
-                    RemoveJob(_conflictAudio);
-                }
+            //        if (_audioTrackNeeded.source == _audioTrackInUse.source)
+            //        {
+            //            //There is a conflict
+            //            _conflictAudio = _audioType;
+            //            //We dont remove the job because we are iterating across the job table, and you should not remove entries as you are iterating through a table , you will get exceptions thrown.
+            //        }
+            //    }
+            //    if (_conflictAudio != AudioType.None) //if the audiotype changes, that means there was a conflict
+            //    {
+            //        RemoveJob(_conflictAudio);
+            //    }
             
-            }
+            //}
 
 
 

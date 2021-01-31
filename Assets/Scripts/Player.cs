@@ -70,9 +70,7 @@ public class Player : MonoBehaviour
             {
                 transform.position = _targetPosition;
 
-                _anim.SetTrigger("Death");
-
-                //AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
+                Die();
 
                 GameManager.INSTANCE.EndGame();
 
@@ -249,8 +247,7 @@ public class Player : MonoBehaviour
 
         _anim.SetTrigger("Death");
 
-        //AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
-
+        AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
     }
 
     public bool IsDead()
