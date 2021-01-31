@@ -31,7 +31,7 @@ public class PaperNote : MonoBehaviour
 
             _canvas.SetActive(true);
 
-            if (!_flag)
+            if (_flag)
             {
                 StartCoroutine(NoName());
             }
