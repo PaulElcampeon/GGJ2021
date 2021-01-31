@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
 
     private bool _isOnDeathFloor;
 
+    private bool _isDead;
+
     private Vector3 _targetPosition;
 
     private Animator _anim;
@@ -234,5 +236,17 @@ public class Player : MonoBehaviour
     public void Dead()
     {
         GameManager.INSTANCE.ReloadScene();
+    }
+
+    public void Die()
+    {
+        _isDead = true;
+
+        _anim.SetTrigger("Death");
+    }
+
+    public bool IsDead()
+    {
+        return _isDead;
     }
 }
