@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityCore.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,8 +14,9 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
+            AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_01, false, 0f);
 
-            if(!gameIsPaused)
+            if (!gameIsPaused)
             {
                 PauseGame();
             }

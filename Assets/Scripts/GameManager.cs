@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityCore.Scene;
 using UnityEngine.SceneManagement;
+using UnityCore.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,10 +49,11 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("Game Won");
 
+            AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_03, false, 0f);
+
             sceneController.LoadSimplified(_nextLevel);
 
             _isSceneLoading = true;
-
         }
         
     }
@@ -95,5 +97,10 @@ public class GameManager : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(_nextLevel);
     }
 }

@@ -15,19 +15,19 @@ namespace UnityCore
 
             #region Unity Functions
 #if UNITY_EDITOR
-            private void Update()
-            {
-                if (Input.GetKeyUp(KeyCode.Z))
-                {
-                    sceneController.Load(SceneType.Menu, (_scene) => {
-                        Debug.Log("Scene [" + _scene + "] loaded from test script!");
-                    }, false, PageType.Loading);
-                }
-                if (Input.GetKeyUp(KeyCode.X))
-                {
-                    sceneController.Load(SceneType.Level1);
-                }
-            }
+            //private void Update()
+            //{
+            //    if (Input.GetKeyUp(KeyCode.Z))
+            //    {
+            //        sceneController.Load(SceneType.Menu, (_scene) => {
+            //            Debug.Log("Scene [" + _scene + "] loaded from test script!");
+            //        }, false, PageType.Loading);
+            //    }
+            //    if (Input.GetKeyUp(KeyCode.X))
+            //    {
+            //        sceneController.Load(SceneType.Level1);
+            //    }
+            //}
 #endif
             #endregion
         }

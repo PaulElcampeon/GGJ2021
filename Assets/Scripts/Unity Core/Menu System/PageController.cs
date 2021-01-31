@@ -34,7 +34,7 @@ namespace UnityCore
                         TurnPageOn(entryPage);
                     }
 
-                    DontDestroyOnLoad(gameObject);
+                    //DontDestroyOnLoad(gameObject);
                 }
                 else
                 {
