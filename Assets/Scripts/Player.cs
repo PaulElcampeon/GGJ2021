@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityCore.Audio;
 
 public class Player : MonoBehaviour
 {
@@ -70,6 +71,8 @@ public class Player : MonoBehaviour
                 transform.position = _targetPosition;
 
                 _anim.SetTrigger("Death");
+
+                AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
 
                 GameManager.INSTANCE.EndGame();
             }
@@ -243,6 +246,9 @@ public class Player : MonoBehaviour
         _isDead = true;
 
         _anim.SetTrigger("Death");
+
+        AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_04, false, 0f);
+
     }
 
     public bool IsDead()

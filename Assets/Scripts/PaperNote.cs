@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityCore.Audio;
 
 public class PaperNote : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PaperNote : MonoBehaviour
         if (Input.anyKey && _canClick)
         {
             SceneManager.LoadScene("Level1");
+
             Debug.Log("Loading scene 1");
         }
 
@@ -32,6 +34,9 @@ public class PaperNote : MonoBehaviour
         {
 
             _canvas.SetActive(true);
+
+            AudioController.instance.PlayAudio(UnityCore.Audio.AudioType.SFX_Jump, false, 0f);
+
 
             if (!_flag)
             {
