@@ -51,7 +51,7 @@ public class PaperNote : MonoBehaviour
     {
         _flag = true;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         _canClick = true;
     }
